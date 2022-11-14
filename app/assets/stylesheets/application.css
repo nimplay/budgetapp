@@ -19,52 +19,52 @@ body {
 }
 
 .top-content-one {
-    width: 100%;
-    height: 6rem;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    color: white;
-    font-weight: 300;
-    margin-top: 0;
+  width: 100%;
+  height: 6rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  color: white;
+  font-weight: 300;
+  margin-top: 0;
 }
 
 .top-content-one h1 {
-    font-size: 2rem;
-    font-weight: 300;
+  font-size: 2rem;
+  font-weight: 300;
 }
 
 .top-content-two {
-    width: 100%;
-    height: 8rem;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    align-items: center;
-    background-color: #3778c2;
-    margin-top: 0;
+  width: 100%;
+  height: 8rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  background-color: #3778c2;
+  margin-top: 0;
 }
 
 .top-content-two p {
-    margin-right: 3rem;
-    padding: 0;
-    color: white;
-    font-weight: 300;
-    font-size: 1.3rem;
-    display: flex;
-    justify-content: center;
+  margin-right: 3rem;
+  padding: 0;
+  color: white;
+  font-weight: 300;
+  font-size: 1.3rem;
+  display: flex;
+  justify-content: center;
 }
 
 .total-budget {
-    width: 100%;
-    height: 4rem;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    background-color: white;
-    margin-top: 0;
+  width: 100%;
+  height: 4rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  margin-top: 0;
 }
 
 .total-budget p {
