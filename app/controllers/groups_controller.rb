@@ -33,7 +33,7 @@ class GroupsController < ApplicationController
     end
 
     @expenses.each do |expense|
-      total_expense =  expense.amount + total_expense
+      total_expense = expense.amount + total_expense
     end
     total_income - total_expense
   end

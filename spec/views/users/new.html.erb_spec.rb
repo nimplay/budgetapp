@@ -7,7 +7,6 @@ RSpec.describe 'users/new', type: :view do
 
   it 'renders new user form' do
     render
-
     assert_select 'form[action=?][method=?]', users_path, 'post' do
     end
   end

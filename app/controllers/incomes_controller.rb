@@ -29,10 +29,10 @@ class IncomesController < ApplicationController
     total_expense = 0
 
     @incomes.each do |income|
-      total_income =  income.amount + total_income
+      total_income = income.amount + total_income
     end
     @expenses.each do |expense|
-      total_expense =  expense.amount + total_expense
+      total_expense = expense.amount + total_expense
     end
     total_income - total_expense
   end
