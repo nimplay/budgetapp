@@ -1,5 +1,4 @@
 class ExpensesController < ApplicationController
-
   def index
     @user = current_user
     @expenses = Expense.where(author_id: @user.id)

@@ -10,9 +10,7 @@ class TransactionsController < ApplicationController
     @credit = credit
   end
 
-  def new
-
-  end
+  def new; end
 
   def credit
     @user = current_user

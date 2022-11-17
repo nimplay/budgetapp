@@ -3,5 +3,4 @@ class Group < ApplicationRecord
   has_many :expenses
   has_many :incomes
   validates :kind, presence: true, inclusion: { in: %w[Income Expense] }
-  
 end

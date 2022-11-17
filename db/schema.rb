@@ -28,7 +28,8 @@ ActiveRecord::Schema[7.0].define(version: 20_221_117_154_753) do
     t.string 'name', default: 'Expense', null: false
     t.string 'description', default: 'Description', null: false
     t.integer 'amount', default: 0, null: false
-    t.string 'icon', default: 'https://img.icons8.com/external-flaticons-lineal-color-flat-icons/64/null/external-costs-digital-nomading-relocation-flaticons-lineal-color-flat-icons.png', null: false
+    t.string 'icon',
+             default: 'https://img.icons8.com/external-flaticons-lineal-color-flat-icons/64/null/external-costs-digital-nomading-relocation-flaticons-lineal-color-flat-icons.png', null: false
     t.datetime 'created_at', null: false
     t.datetime 'updated_at', null: false
   end
