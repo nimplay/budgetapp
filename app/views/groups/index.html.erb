@@ -1,6 +1,11 @@
 <div class='container'>
 <%= render 'groups/navbar' %>
 <%= render 'shared/credit' %>
+<div class='total-budget '>
+    <p>Total Groups</p>
+    <p><%= @groups.count %> </p>
+  </div>
+
 <div class='expense-container'>
 <%  @groups.each do |group| %>
   <div class='expense'>

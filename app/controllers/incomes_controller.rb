@@ -3,6 +3,8 @@ class IncomesController < ApplicationController
     @user = current_user
     @incomes = Income.where(author_id: @user.id)
     @credit = credit
+    @total = total_income
+    @incomes = @incomes.order('created_at DESC')
   end
 
   def new
@@ -35,6 +37,17 @@ class IncomesController < ApplicationController
       total_expense = expense.amount + total_expense
     end
     total_income - total_expense
+  end
+
+  def total_income
+    @user = current_user
+    @incomes = Income.where(author_id: @user.id)
+    total_income = 0
+
+    @incomes.each do |income|
+      total_income = income.amount + total_income
+    end
+    total_income
   end
 
   def income_params

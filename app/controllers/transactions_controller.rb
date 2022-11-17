@@ -8,6 +8,7 @@ class TransactionsController < ApplicationController
     @transactions.push(@expenses)
     @transactions.flatten!
     @credit = credit
+    @transactions = @transactions.sort_by(&:created_at).reverse
   end
 
   def new; end

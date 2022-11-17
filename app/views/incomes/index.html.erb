@@ -1,6 +1,10 @@
 <div class='container'>
 <%= render 'incomes/navbar' %>
 <%= render 'shared/credit' %>
+<div class='total-budget '>
+    <p>Total incomes</p>
+    <p>$ <%= @total %> </p>
+  </div>
 
 <div class='expense-container'>
  <% @incomes.each do |income| %>

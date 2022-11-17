@@ -3,6 +3,8 @@ class ExpensesController < ApplicationController
     @user = current_user
     @expenses = Expense.where(author_id: @user.id)
     @credit = credit
+    @total = total_expense
+    @expenses = @expenses.order('created_at DESC')
   end
 
   def new
@@ -36,6 +38,17 @@ class ExpensesController < ApplicationController
       total_expense = expense.amount + total_expense
     end
     total_income - total_expense
+  end
+
+  def total_expense
+    @user = current_user
+    @expenses = Expense.where(author_id: @user.id)
+    total_expense = 0
+
+    @expenses.each do |expense|
+      total_expense = expense.amount + total_expense
+    end
+    total_expense
   end
 
   def expense_params

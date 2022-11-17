@@ -2,6 +2,11 @@
 <%= render 'expenses/navbar' %>
 <%= render 'shared/credit' %>
 
+<div class='total-budget '>
+    <p>Total Expenses</p>
+    <p>$ <%= @total %> </p>
+  </div>
+
 <div class='expense-container'>
  <% @expenses.each do |expense| %>
   <div class='expense'>
