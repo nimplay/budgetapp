@@ -45,6 +45,16 @@ body {
   transition-duration: 0.25s;
 }
 
+.menu__btn > span::before {
+  content: '';
+  top: -8px;
+}
+
+.menu__btn > span::after {
+  content: '';
+  top: 8px;
+}
+
 #menu__toggle {
   opacity: 0;
 }
@@ -75,16 +85,6 @@ body {
   height: 50px;
   cursor: pointer;
   z-index: 1;
-}
-
-.menu__btn > span::before {
-  content: '';
-  top: -8px;
-}
-
-.menu__btn > span::after {
-  content: '';
-  top: 8px;
 }
 
 .menu-user-li {
