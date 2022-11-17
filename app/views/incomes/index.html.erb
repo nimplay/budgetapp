@@ -1,0 +1,28 @@
+<div class='container'>
+<%= render 'incomes/navbar' %>
+<%= render 'shared/credit' %>
+
+<div class='expense-container'>
+ <% @incomes.each do |income| %>
+  <div class='expense'>
+    <div class='expense-main'>
+      <img src=<%= income.icon %> , class='images'/>
+      <div class='expense-data'>
+      <h2><%=income.name%></h2>
+      <p><%=income.created_at%></p>
+      </div>
+    </div>
+    <div class='expense-data'>
+      <h2>$ <%=income.amount%></h2>
+      <%= link_to "Delete", incomes_path(income.id), method: :delete, style:'color: red' %>
+    </div>
+  </div>
+
+  <% end %>
+
+</div>
+
+<%=link_to new_income_path, class:'actions' do%>
+  <p>NEW INCOME</p>
+  <%end%>
+</div>

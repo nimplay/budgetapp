@@ -1,0 +1,22 @@
+<div class='container'>
+<%= render 'groups/navbar' %>
+<%= render 'shared/credit' %>
+<div class='total-budget '>
+ <p>Git credit</p>
+  <p>$ 45</p>
+</div>
+<div class='expense-container'>
+<%  @groups.each do |group| %>
+  <div class='expense'>
+    <div class='expense-main'>
+      <img src=<%=group.icon%> , class='images'/>
+      <div class='expense-data'>
+        <h2><%=group.name%></h2>
+        <p>Type: <%=group.kind%></p>
+      </div>
+    </div>
+    <h1>$ 45</h1>
+  </div>
+<% end %>
+</div>
+</div>

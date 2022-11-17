@@ -1,5 +1,34 @@
-<%= render 'shared/navbar' %>
-<div class='total-budget '>
- <p>Git credit</p>
-  <p>$ 45</p>
+<div class='container'>
+  <%= render 'home/navbar' %>
+  <%= render 'shared/credit' %>
+
+  <%=link_to groups_path, class:'group' do%>
+    <img src="https://img.icons8.com/stickers/100/null/groups.png", class='images'/>
+    <div class='expense-data'>
+      <h1>Groups </h1>
+    </div>
+    <h1><%= @groups.count %></h1>
+  <% end %>
+
+  <div class='expense-container'>
+    <%=link_to incomes_path, class:'expense' do%>
+      <img src="https://img.icons8.com/external-flatart-icons-lineal-color-flatarticons/64/null/external-income-startup-flatart-icons-lineal-color-flatarticons.png", class='images'/>
+      <div class='expense-data'>
+        <h1>Incomes</h1>
+      </div>
+      <h1>$ <%=@total_income%></h1>
+    <% end %>
+
+    <%=link_to expenses_path, class:'expense' do%>
+      <img src="https://img.icons8.com/external-flaticons-lineal-color-flat-icons/64/null/external-costs-digital-nomading-relocation-flaticons-lineal-color-flat-icons.png", class='images'/>
+      <div class='expense-data'>
+        <h1>Expenses</h1>
+      </div>
+      <h1>$ <%=@total_expense%></h1>
+    <%end%>
+
+  </div>
+  <%=link_to transactions_path, class:'actions' do%>
+    <p>ALL TRANSACTIONS</p>
+  <%end%>
 </div>

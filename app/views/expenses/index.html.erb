@@ -1,0 +1,28 @@
+<div class='container'>
+<%= render 'expenses/navbar' %>
+<%= render 'shared/credit' %>
+
+<div class='expense-container'>
+ <% @expenses.each do |expense| %>
+  <div class='expense'>
+    <div class='expense-main'>
+      <img src=<%= expense.icon %> , class='images'/>
+      <div class='expense-data'>
+      <h2><%=expense.name%></h2>
+      <p><%=expense.created_at%></p>
+      </div>
+    </div>
+    <div class='expense-data'>
+      <h2>$ <%=expense.amount%></h2>
+      <%= link_to "Delete", expenses_path(expense.id), method: :delete, style:'color: red' %>
+    </div>
+  </div>
+
+  <% end %>
+
+</div>
+
+  <%=link_to new_expense_path, class:'actions' do%>
+  <p>NEW EXPENSE</p>
+  <%end%>
+</div>
