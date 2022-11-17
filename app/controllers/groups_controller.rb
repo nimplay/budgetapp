@@ -5,6 +5,18 @@ class GroupsController < ApplicationController
     @credit = credit
   end
 
+  def show
+    @credit = credit
+    @user = current_user
+    @group = Group.where(id: params[:id])
+    @expense_groups = ExpenseGroup.where(group_id: params[:id])
+    @expense = Expense.where(id: @expense_groups.pluck(:expense_id))
+    @income_groups = IncomeGroup.where(group_id: params[:id])
+    @income = Income.where(id: @income_groups.pluck(:income_id))
+    @kind = @group.pluck(:kind)
+
+  end
+
   def new
     @user = current_user
     @group = Group.new

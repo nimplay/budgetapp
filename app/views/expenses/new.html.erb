@@ -1,5 +1,3 @@
-
-
 <%= form_for(@expense, url: expenses_path) do |f| %>
   <div class='container'>
 <div class='header'>
@@ -12,7 +10,8 @@
     </div>
   </div>
 
-  <div class='form'>
+   <%= f.select :id, @groups.map {|group| ["#{group.name}", group.id]}, { class:"field" }%>
+     <div class='form'>
     <%= f.label :Paste_an_amazing_image%>
     <%= f.text_field :icon, autocomplete: "icon", placeholder:"Icon", class:"field"%>
     <%= f.label :Expense_name%>
@@ -21,6 +20,7 @@
     <%= f.text_field :description, autocomplete: "description", placeholder:"Description", class:"field" %>
     <%= f.label :Amount%>
     <%= f.number_field :amount, autofocus: true, autocomplete: "amount", placeholder:"Amount", class:"field" %>
+
   </div>
   <%= f.submit "SAVE", class:'actions'%>
 </div>

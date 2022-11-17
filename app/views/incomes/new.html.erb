@@ -1,5 +1,3 @@
-
-
 <%= form_for(@income, url: incomes_path) do |f| %>
   <div class='container'>
 <div class='header'>
@@ -13,6 +11,8 @@
 
     </div>
   </div>
+
+  <%= f.select :id, @groups.map {|group| ["#{group.name}", group.id]}, { class:"field" }%>
 
   <div class='form'>
      <%= f.label :Paste_an_amazing_image%>

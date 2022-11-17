@@ -10,13 +10,18 @@ class IncomesController < ApplicationController
   def new
     @user = current_user
     @income = Income.new
+    @groups = Group.where(author_id: @user.id, kind: 'Income')
   end
 
   def create
     @user = current_user
     @income = Income.new(income_params)
     @income.author_id = @user.id
+    @group_id = 3
+
     if @income.save
+      @income_group = IncomeGroup.new(income_id: @income.id, group_id: @group_id)
+      @income_group.save
       redirect_to incomes_path
     else
       render :new

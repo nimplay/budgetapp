@@ -1,22 +1,35 @@
 <div class='container'>
 <%= render 'groups/navbar' %>
 <%= render 'shared/credit' %>
-<div class='total-budget '>
- <p>Git credit</p>
-  <p>$ 45</p>
-</div>
+
+
+
 <div class='expense-container'>
-<%  @groups.each do |group| %>
+<% if @kind[0] = 'Income' %>
+  <%  @income.each do |income| %>
+    <div class='expense'>
+      <div class='expense-main'>
+        <img src=<%=income.icon%> , class='images'/>
+        <div class='expense-data'>
+          <h2><%=income.name%></h2>
+        </div>
+      </div>
+      <h1>$ <%=income.amount%></h1>
+    </div>
+  <% end %>
+<% end %>
+<% if @kind[0] = 'Expense' %>
+<%  @expense.each do |expense| %>
   <div class='expense'>
     <div class='expense-main'>
-      <img src=<%=group.icon%> , class='images'/>
+      <img src=<%=expense.icon%> , class='images'/>
       <div class='expense-data'>
-        <h2><%=group.name%></h2>
-        <p>Type: <%=group.kind%></p>
+        <h2><%=expense.name%></h2>
       </div>
     </div>
-    <h1>$ 45</h1>
+    <h1>$ <%=expense.amount%></h1>
   </div>
 <% end %>
+<%end%>
 </div>
 </div>

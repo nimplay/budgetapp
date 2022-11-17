@@ -10,13 +10,18 @@ class ExpensesController < ApplicationController
   def new
     @user = current_user
     @expense = Expense.new
+    @groups = Group.where(author_id: @user.id, kind: 'Expense')
   end
 
   def create
     @user = current_user
     @expense = Expense.new(expense_params)
     @expense.author_id = @user.id
+    @group_id = 1
+
     if @expense.save
+      @expense_group = ExpenseGroup.new(expense_id: @expense.id, group_id: @group_id)
+      @expense_group.save
       redirect_to expenses_path
     else
       render :new

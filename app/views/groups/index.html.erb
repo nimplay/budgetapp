@@ -8,6 +8,7 @@
 
 <div class='expense-container'>
 <%  @groups.each do |group| %>
+  <%= link_to group_path(group.id) do %>
   <div class='expense'>
     <div class='expense-main'>
       <img src=<%=group.icon%> , class='images'/>
@@ -21,6 +22,7 @@
       <%= link_to "Delete", groups_path(group.id), method: :delete, style:'color: red' %>
     </div>
   </div>
+  <% end %>
 <% end %>
 </div>
 
