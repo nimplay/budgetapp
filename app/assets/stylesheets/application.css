@@ -17,6 +17,7 @@ body {
   display: flex;
   flex-direction: column;
 }
+
 /* burger button */
 
 #menu__toggle {
@@ -59,7 +60,7 @@ body {
   width: 100%;
   height: 2px;
   background-color: white;
-  transition-duration: .25s;
+  transition-duration: 0.25s;
 }
 
 .menu__btn > span::before {
@@ -83,8 +84,8 @@ body {
   padding: 80px 0;
   list-style: none;
   background-color: #3778c2;
-  box-shadow: 2px 2px 6px rgba(0, 0, 0, .4);
-  transition-duration: .25s;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
+  transition-duration: 0.25s;
 }
 
 .menu-user-li {
@@ -92,7 +93,6 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-bottom: 1rem;
   margin-top: 2rem;
   margin-bottom: 2rem;
 }
@@ -119,11 +119,11 @@ body {
   font-size: 1.8rem;
   font-weight: 100;
   text-decoration: none;
-  transition-duration: .25s;
+  transition-duration: 0.25s;
 }
 
 .menu__item:hover {
-  background-color: #CFD8DC;
+  background-color: #cfd8dc;
 }
 
 /* Netx code */
@@ -146,7 +146,7 @@ body {
   align-items: center;
   height: 100%;
   width: 100%;
-  background-color: rgba(0, 0, 0, .4);
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
 .splash-content {
@@ -248,14 +248,14 @@ body {
 }
 
 .expense-container {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 0;
-    gap: 1rem;
-    margin-top: 1rem;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 0;
+  gap: 1rem;
+  margin-top: 1rem;
 }
 
 .expense {
@@ -311,7 +311,7 @@ button {
   margin-top: 2rem;
  }
 
- button p {
+button p {
   height: 6rem;
   width: 90%;
   color: white;
@@ -322,9 +322,9 @@ button {
   align-items: center;
   justify-content: center;
   border-radius: 0.5rem;
- }
+}
 
- .form {
+.form {
   width: 100%;
   height: 100%;
   display: flex;
@@ -332,16 +332,16 @@ button {
   justify-content: center;
   align-items: center;
   margin-top: 2rem;
- }
+}
 
- .form label {
+.form label {
   margin-top: 2rem;
   font-size: 1.3rem;
   margin-bottom: 0.5rem;
   color: #434b54;
- }
+}
 
- .field {
+.field {
   width: 100%;
   height: 6rem;
   display: flex;
@@ -353,16 +353,16 @@ button {
   font-size: 1.5rem;
   border: 1px solid #c1c2c3;
   padding-left: 3rem;
- }
+}
 
- .remember-form {
+.remember-form {
   width: 100%;
   display: flex;
   flex-direction: row;
   padding: 1rem;
- }
+}
 
- .devise-links {
+.devise-links {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -370,14 +370,14 @@ button {
   align-items: center;
   margin-top: 0.8rem;
   gap: 0.5rem;
- }
+}
 
- .devise-links a {
+.devise-links a {
   text-decoration: none;
   color: #434b54;
   font-size: 1.2rem;
   font-weight: 100;
- }
+}
 
 .actions {
   width: 100%;
