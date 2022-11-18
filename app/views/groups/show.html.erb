@@ -1,0 +1,35 @@
+<div class='container'>
+<%= render 'groups/navbar' %>
+<%= render 'shared/credit' %>
+
+
+
+<div class='expense-container'>
+<% if @kind[0] = 'Income' %>
+  <%  @income.each do |income| %>
+    <div class='expense'>
+      <div class='expense-main'>
+        <img src=<%=income.icon%> , class='images'/>
+        <div class='expense-data'>
+          <h2><%=income.name%></h2>
+        </div>
+      </div>
+      <h1>$ <%=income.amount%></h1>
+    </div>
+  <% end %>
+<% end %>
+<% if @kind[0] = 'Expense' %>
+<%  @expense.each do |expense| %>
+  <div class='expense'>
+    <div class='expense-main'>
+      <img src=<%=expense.icon%> , class='images'/>
+      <div class='expense-data'>
+        <h2><%=expense.name%></h2>
+      </div>
+    </div>
+    <h1>$ <%=expense.amount%></h1>
+  </div>
+<% end %>
+<%end%>
+</div>
+</div>
