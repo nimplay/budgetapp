@@ -1,0 +1,25 @@
+<%= form_for(@group, url: groups_path) do |f| %>
+  <div class='container'>
+<div class='header'>
+    <div class='top-content-one'>
+      <%= link_to root_path do %>
+        <img src="https://img.icons8.com/ios/50/ffffff/circled-left-2.png"/>
+      <% end %>
+      <h1>NEW GROUP</h1>
+      <%= link_to("HOME", home_index_path, class:"form-header-btn") %>
+    </div>
+  </div>
+
+  <div class='form'>
+    <%= f.label :Select_kind_of_group%>
+    <%= f.select :kind, ["Expense", "Income"], selected: "Expense"%>
+    <%= f.label :Paste_an_amazing_image%>
+    <%= f.text_field :icon, autocomplete: "icon", placeholder:"Icon", class:"field"%>
+    <%= f.label :Group_name%>
+    <%= f.text_field :name, autocomplete: "name", placeholder:"Name", class:"field" %>
+
+
+  </div>
+  <%= f.submit "SAVE", class:'actions'%>
+  </div>
+<% end %>

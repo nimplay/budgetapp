@@ -1,0 +1,27 @@
+<%= form_for(@expense, url: expenses_path) do |f| %>
+  <div class='container'>
+<div class='header'>
+    <div class='top-content-one'>
+      <%= link_to root_path do %>
+        <img src="https://img.icons8.com/ios/50/ffffff/circled-left-2.png"/>
+      <% end %>
+      <h1>NEW EXPENSE</h1>
+      <%= link_to("HOME", home_index_path, class:"form-header-btn") %>
+    </div>
+  </div>
+
+   <%= f.select :id, @groups.map {|group| ["#{group.name}", group.id]}, { class:"field" }%>
+     <div class='form'>
+    <%= f.label :Paste_an_amazing_image%>
+    <%= f.text_field :icon, autocomplete: "icon", placeholder:"Icon", class:"field"%>
+    <%= f.label :Expense_name%>
+    <%= f.text_field :name, autocomplete: "name", placeholder:"Name", class:"field" %>
+    <%= f.label :Expense_description%>
+    <%= f.text_field :description, autocomplete: "description", placeholder:"Description", class:"field" %>
+    <%= f.label :Amount%>
+    <%= f.number_field :amount, autofocus: true, autocomplete: "amount", placeholder:"Amount", class:"field" %>
+
+  </div>
+  <%= f.submit "SAVE", class:'actions'%>
+</div>
+<% end %>

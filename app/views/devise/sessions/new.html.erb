@@ -1,0 +1,18 @@
+
+
+<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+  <div class='header'>
+    <div class='top-content-one'>
+      <%= link_to root_path do %>
+        <img src="https://img.icons8.com/ios/50/ffffff/circled-left-2.png"/>
+      <% end %>
+      <h1>LOGIN</h1>
+      <%= f.submit "Log in", class:'form-header-btn' %>
+    </div>
+  </div>
+  <div class='form'>
+      <%= f.email_field :email, autocomplete: "email", placeholder:"Email", class:'field' %>
+      <%= f.password_field :password, autocomplete: "current-password", placeholder:"Password", class:'field'   %>
+  </div>
+<% end %>
+<%= render "devise/shared/links" %>
