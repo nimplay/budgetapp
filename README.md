@@ -69,9 +69,8 @@ In the terminal, go to your file directory and run this command.
 $ git clone https://github.com/nimplay/budgetapp.git
 ```
 ```
-$ bundle install```
-
-
+$ bundle install
+```
 
 ## Authors
 
@@ -95,7 +94,8 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-- Based on the [design](https://www.behance.net/gallery/19759151/Snapscan-iOs-design-and-branding?tracking_source=&&&) by [Gregoire Vella](http://linkedin.com/company/minimalapps)
+- Based on the [design](https://www.behance.net/gallery/19759151/Snapscan-iOs-design-and-branding?tracking_source=&&&)
+by [Gregoire Vella](http://linkedin.com/company/minimalapps)
 
 - [Microverse](https://github.com/microverseinc) team.
 - Coding Partners.
