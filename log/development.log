@@ -43996,3 +43996,114 @@ Processing by UsersController#welcome as TURBO_STREAM
 Completed 200 OK in 19ms (Views: 16.0ms | ActiveRecord: 0.0ms | Allocations: 3068)
 
 
+Started GET "/" for ::1 at 2022-11-18 10:49:16 -0400
+  [1m[36mActiveRecord::SchemaMigration Pluck (190.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#welcome as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/welcome.html.erb within layouts/application
+  Rendered users/welcome.html.erb within layouts/application (Duration: 62.3ms | Allocations: 707)
+  Rendered layout layouts/application.html.erb (Duration: 2067.9ms | Allocations: 50385)
+Completed 200 OK in 2723ms (Views: 2177.3ms | ActiveRecord: 0.0ms | Allocations: 55293)
+
+
+Started GET "/users/sign_in" for ::1 at 2022-11-18 10:50:50 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 6.5ms | Allocations: 823)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 187.1ms | Allocations: 2869)
+  Rendered layout layouts/application.html.erb (Duration: 204.4ms | Allocations: 5240)
+Completed 200 OK in 481ms (Views: 212.5ms | ActiveRecord: 128.3ms | Allocations: 18135)
+
+
+Started GET "/users/sign_up" for ::1 at 2022-11-18 10:50:55 -0400
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 3.5ms | Allocations: 217)
+  Rendered devise/shared/_links.html.erb (Duration: 1.6ms | Allocations: 210)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 33.1ms | Allocations: 1996)
+  Rendered layout layouts/application.html.erb (Duration: 49.6ms | Allocations: 4366)
+Completed 200 OK in 64ms (Views: 58.9ms | ActiveRecord: 0.0ms | Allocations: 5747)
+
+
+Started GET "/" for ::1 at 2022-11-18 10:51:31 -0400
+Processing by UsersController#welcome as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/welcome.html.erb within layouts/application
+  Rendered users/welcome.html.erb within layouts/application (Duration: 2.2ms | Allocations: 106)
+  Rendered layout layouts/application.html.erb (Duration: 75.7ms | Allocations: 2449)
+Completed 200 OK in 88ms (Views: 83.7ms | ActiveRecord: 0.0ms | Allocations: 3096)
+
+
+Started GET "/users/sign_in" for ::1 at 2022-11-18 10:51:33 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 2.1ms | Allocations: 185)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 10.2ms | Allocations: 782)
+  Rendered layout layouts/application.html.erb (Duration: 45.9ms | Allocations: 2959)
+Completed 200 OK in 60ms (Views: 47.2ms | ActiveRecord: 0.0ms | Allocations: 3664)
+
+
+Started POST "/users/sign_in" for ::1 at 2022-11-18 10:51:41 -0400
+Processing by Devise::SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"lola@email.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (39.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "lola@email.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 586ms (ActiveRecord: 40.0ms | Allocations: 5587)
+
+
+Started GET "/" for ::1 at 2022-11-18 10:51:42 -0400
+Processing by UsersController#welcome as TURBO_STREAM
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:5:in `welcome'
+Redirected to http://localhost:3000/home
+Completed 302 Found in 37ms (ActiveRecord: 2.2ms | Allocations: 1407)
+
+
+Started GET "/home" for ::1 at 2022-11-18 10:51:42 -0400
+Processing by HomeController#index as TURBO_STREAM
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mIncome Load (124.5ms)[0m  [1m[34mSELECT "incomes".* FROM "incomes" WHERE "incomes"."author_id" = $1[0m  [["author_id", 1]]
+  ↳ app/controllers/home_controller.rb:19:in `credit'
+  [1m[36mExpense Load (3.2ms)[0m  [1m[34mSELECT "expenses".* FROM "expenses" WHERE "expenses"."author_id" = $1[0m  [["author_id", 1]]
+  ↳ app/controllers/home_controller.rb:23:in `credit'
+  [1m[36mCACHE Income Load (0.1ms)[0m  [1m[34mSELECT "incomes".* FROM "incomes" WHERE "incomes"."author_id" = $1[0m  [["author_id", 1]]
+  ↳ app/controllers/home_controller.rb:32:in `income'
+  [1m[36mCACHE Expense Load (0.0ms)[0m  [1m[34mSELECT "expenses".* FROM "expenses" WHERE "expenses"."author_id" = $1[0m  [["author_id", 1]]
+  ↳ app/controllers/home_controller.rb:41:in `expense'
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered shared/_burger.html.erb (Duration: 3.3ms | Allocations: 403)
+  Rendered home/_navbar.html.erb (Duration: 10.0ms | Allocations: 654)
+  Rendered shared/_credit.html.erb (Duration: 4.3ms | Allocations: 124)
+  [1m[36mGroup Count (97.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "groups" WHERE "groups"."author_id" = $1[0m  [["author_id", 1]]
+  ↳ app/views/home/index.html.erb:10
+  Rendered home/index.html.erb within layouts/application (Duration: 153.3ms | Allocations: 2479)
+  Rendered layout layouts/application.html.erb (Duration: 176.1ms | Allocations: 4898)
+Completed 200 OK in 498ms (Views: 86.3ms | ActiveRecord: 255.0ms | Allocations: 24403)
+
+
+Started GET "/groups" for ::1 at 2022-11-18 10:51:46 -0400
+Processing by GroupsController#index as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:3:in `index'
+  [1m[36mIncome Load (3.0ms)[0m  [1m[34mSELECT "incomes".* FROM "incomes" WHERE "incomes"."author_id" = $1[0m  [["author_id", 1]]
+  ↳ app/controllers/groups_controller.rb:42:in `credit'
+  [1m[36mExpense Load (0.7ms)[0m  [1m[34mSELECT "expenses".* FROM "expenses" WHERE "expenses"."author_id" = $1[0m  [["author_id", 1]]
+  ↳ app/controllers/groups_controller.rb:46:in `credit'
+  Rendering layout layouts/application.html.erb
+  Rendering groups/index.html.erb within layouts/application
+  Rendered shared/_burger.html.erb (Duration: 1.0ms | Allocations: 209)
+  Rendered groups/_navbar.html.erb (Duration: 4.8ms | Allocations: 506)
+  Rendered shared/_credit.html.erb (Duration: 0.2ms | Allocations: 11)
+  [1m[36mGroup Count (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "groups" WHERE "groups"."author_id" = $1[0m  [["author_id", 1]]
+  ↳ app/views/groups/index.html.erb:6
+  [1m[36mGroup Load (0.5ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."author_id" = $1[0m  [["author_id", 1]]
+  ↳ app/views/groups/index.html.erb:10
+  Rendered groups/index.html.erb within layouts/application (Duration: 48.7ms | Allocations: 5135)
+  Rendered layout layouts/application.html.erb (Duration: 65.7ms | Allocations: 7542)
+Completed 200 OK in 102ms (Views: 65.2ms | ActiveRecord: 10.1ms | Allocations: 10856)
+
+

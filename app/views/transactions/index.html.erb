@@ -1,0 +1,23 @@
+<div class='container'>
+<%= render 'transactions/navbar' %>
+<%= render 'shared/credit' %>
+
+<div class='expense-container'>
+  <% @transactions.each do |transaction| %>
+    <div class='expense'>
+      <div class='expense-main'>
+        <img src=<%= transaction.icon %> , class='images'/>
+        <div class='expense-data'>
+        <h2><%=transaction.name%></h2>
+        <p><%=transaction.created_at%></p>
+      </div>
+    </div>
+    <p>$ <%=transaction.amount%></p>
+  </div>
+<% end %>
+</div>
+
+<%=link_to new_transaction_path, class:'actions' do%>
+  <p>NEW TRANSACTION</p>
+  <%end%>
+</div>

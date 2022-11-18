@@ -1,0 +1,11 @@
+<div class='container'>
+<%= render 'transactions/navbar' %>
+<%= render 'shared/credit' %>
+
+<%=link_to new_income_path, class:'actions' do%>
+  <p>NEW INCOME</p>
+<%end%>
+<%=link_to new_expense_path, class:'actions' do%>
+  <p>NEW EXPENSE</p>
+<%end%>
+</div>
