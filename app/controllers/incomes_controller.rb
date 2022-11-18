@@ -17,7 +17,7 @@ class IncomesController < ApplicationController
     @user = current_user
     @income = Income.new(income_params)
     @income.author_id = @user.id
-    @group_id = 3
+    @group_id = 1
 
     if @income.save
       @income_group = IncomeGroup.new(income_id: @income.id, group_id: @group_id)

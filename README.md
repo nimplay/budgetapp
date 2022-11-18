@@ -13,14 +13,22 @@
 - postgresql
 - pgadmin4
 
+## live
+
  ## App ScreenShot
+![](/Captura%20de%20pantalla%202022-11-17%20a%20la(s)%209.00.40%20p.%20m..png)
+![](/Captura%20de%20pantalla%202022-11-17%20a%20la(s)%209.02.08%20p.%20m..png)
+![](/Captura%20de%20pantalla%202022-11-17%20a%20la(s)%209.02.32%20p.%20m..png)
 
 
  ## Video Preview
 
+ https://drive.google.com/file/d/1z-eiGwALJcklGdSmJEu1WW_alwP97z7_/view?usp=sharing
+
 
  ## SQL schema
 
+![](/Captura%20de%20pantalla%202022-11-17%20a%20la(s)%209.24.34%20p.%20m..png)
 
 ## Getting Started
 
