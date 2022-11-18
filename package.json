@@ -1,0 +1,24 @@
+{
+  "name": "budgetapp",
+  "version": "1.0.0",
+  "description": "![](https://img.shields.io/badge/Microverse-blueviolet) # Budgetapp - Ruby and Rails  This is the Budget app initiated in the fifth module in the Microverse program. ## Built With ![](https://img.shields.io/badge/-Ruby-red) ![](https://img.shields.io/badge/-Rails-red) ![](https://img.shields.io/badge/-VSCode-blue) ![](https://img.shields.io/badge/-Rspec-red) - Visual Studio Code - Ruby version 3.1.2 - Ruby & rails version 7.0.4 - Rspec - postgresql - pgadmin4",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nimplay/budgetapp.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nimplay/budgetapp/issues"
+  },
+  "homepage": "https://github.com/nimplay/budgetapp#readme"
+}
