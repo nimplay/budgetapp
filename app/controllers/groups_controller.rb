@@ -14,7 +14,6 @@ class GroupsController < ApplicationController
     @income_groups = IncomeGroup.where(group_id: params[:id])
     @income = Income.where(id: @income_groups.pluck(:income_id))
     @kind = @group.pluck(:kind)
-
   end
 
   def new
