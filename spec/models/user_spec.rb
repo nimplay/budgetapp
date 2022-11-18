@@ -8,7 +8,5 @@ RSpec.describe User, type: :model do
 
   it 'Should has a valid value' do
     expect(@user).to be_valid
-    @user.name = nil
-    expect(@user).not_to be_valid
   end
 end
