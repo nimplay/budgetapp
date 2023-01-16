@@ -13,8 +13,6 @@
 - postgresql
 - pgadmin4
 
-pepito
-
 ## live
 https://pure-springs-02528.herokuapp.com/
  ## App ScreenShot
